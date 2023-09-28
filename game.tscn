@@ -57,6 +57,11 @@ script = ExtResource("1")
 [node name="Paddle" parent="Paddle_Container" instance=ExtResource("2")]
 position = Vector2(578, 720)
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Paddle_Container/Paddle"]
+amount = 20
+emission_shape = 1
+emission_sphere_radius = 102.18
+
 [node name="Ball_Container" type="Node2D" parent="."]
 script = ExtResource("3")
 

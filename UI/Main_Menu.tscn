@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ei3ny6s8bla5"]
+[gd_scene load_steps=4 format=3 uid="uid://ei3ny6s8bla5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://y2de0ngyx782" path="res://Assets/PicturamaFounder_PERSONAL_USE_ONLY.otf" id="2_ttmla"]
+[ext_resource type="FontFile" uid="uid://bur1lffktajrq" path="res://PicturamaAlternate_PERSONAL_USE_ONLY.otf" id="3_j2s22"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -15,13 +17,14 @@ script = ExtResource("1")
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.501961)
+color = Color(0.721569, 0.247059, 0.678431, 0.501961)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -248.0
+theme_override_fonts/font = ExtResource("2_ttmla")
 text = "Brick Breaker"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -39,6 +42,7 @@ offset_right = 100.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_j2s22")
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]
@@ -54,6 +58,7 @@ offset_right = 100.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_j2s22")
 text = "Quit"
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
