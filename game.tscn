@@ -25,16 +25,26 @@ script = ExtResource("4")
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Left"]
+offset_left = -91.0
+offset_top = -27.0
+offset_right = -81.0
+offset_bottom = 63.0
+scale = Vector2(10, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Left"]
 position = Vector2(-90, 400)
 shape = SubResource("1")
 
 [node name="Wall_Right" type="StaticBody2D" parent="Wall_Container"]
-position = Vector2(1152, 2.08165e-12)
+position = Vector2(1151, 2.08165e-12)
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Right"]
+offset_left = -9.0
+offset_top = -102.0
+offset_right = 11.0
+offset_bottom = -1.99998
+scale = Vector2(10, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Right"]
 position = Vector2(90, 400)
@@ -44,6 +54,11 @@ shape = SubResource("1")
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Top"]
+offset_left = -149.0
+offset_top = -88.0
+offset_right = 1.00003
+offset_bottom = -78.0
+scale = Vector2(10, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Top"]
 position = Vector2(512, -90)

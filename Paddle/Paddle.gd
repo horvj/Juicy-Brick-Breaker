@@ -5,6 +5,11 @@ var speed = 10.0
 var width = 0
 var width_default = 0
 var decay = 0.02
+var time_highlight = 0.4
+var time_highlight_size = 0.3
+
+var tween
+
 
 func _ready():
 	width = $CollisionShape2D.get_shape().size.x
@@ -22,7 +27,10 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
-	pass
+	if tween:
+		tween.kill()
+	tween = create_tween().set_parallel(true)
+	
 
 func powerup(payload):
 	for c in $Powerups.get_children():

@@ -14,5 +14,13 @@ offset_top = -15.0
 offset_right = 45.0
 offset_bottom = 15.0
 
+[node name="Highlighter" type="ColorRect" parent="."]
+visible = false
+offset_left = -45.0
+offset_top = -15.0
+offset_right = 45.0
+offset_bottom = 15.0
+color = Color(0.345098, 0.490196, 0.866667, 1)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
