@@ -4,7 +4,7 @@ var target = Vector2.ZERO
 var speed = 10.0
 var width = 0
 var width_default = 0
-var decay = 0.02
+var decay = 0.01
 var time_highlight = 0.4
 var time_highlight_size = 0.3
 
@@ -21,15 +21,22 @@ func _physics_process(_delta):
 	position = target
 	for c in $Powerups.get_children():
 		c.payload()
+	if $ColorRect.color.s > 0:
+		$ColorRect.color.s -= decay
+	if $ColorRect.color.v < 1:
+		$ColorRect.color.v += decay
+	
 
 func _input(event):
 	if event is InputEventMouseMotion:
 		target.x += event.relative.x
+		
 
 func hit(_ball):
 	if tween:
 		tween.kill()
 	tween = create_tween().set_parallel(true)
+	$ColorRect.color = Color(randf(),randf(),randf())
 	
 
 func powerup(payload):

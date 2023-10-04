@@ -16,7 +16,9 @@ var powerup_prob = 0.1
 
 func _ready():
 	randomize()
-	position = new_position
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	position.x = new_position.x
+	position.y = -100
 	tween = create_tween()
 	tween.tween_property(self, "position", new_position, 0.5 + randf()+2).set_trans(Tween.TRANS_BOUNCE)
 	if score >= 100:
