@@ -48,6 +48,8 @@ func hit(_ball):
 	die()
 
 func die():
+	var brick_sound = get_node("/root/Game/Brick_Sound")
+	brick_sound.play()
 	dying = true
 	collision_layer = 0
 	Global.update_score(score)

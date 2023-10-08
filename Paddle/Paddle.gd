@@ -33,6 +33,8 @@ func _input(event):
 		
 
 func hit(_ball):
+	var paddle_sound = get_node("/root/Game/Paddle_Sound")
+	paddle_sound.play()
 	if tween:
 		tween.kill()
 	tween = create_tween().set_parallel(true)

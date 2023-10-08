@@ -2,6 +2,8 @@ extends Node2D
 
 
 func _ready():
+	var music = get_node("/root/Game/Music")
+	music.play()
 	if Global.level < 0 or Global.level >= len(Levels.levels):
 		Global.end_game(true)
 	else:
