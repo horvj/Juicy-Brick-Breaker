@@ -39,6 +39,10 @@ func hit(_ball):
 		tween.kill()
 	tween = create_tween().set_parallel(true)
 	$ColorRect.color = Color(randf(),randf(),randf())
+	tween = get_tree().create_tween()
+
+
+
 	
 
 func powerup(payload):

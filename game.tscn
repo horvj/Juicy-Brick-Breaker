@@ -57,6 +57,7 @@ position = Vector2(90, 400)
 shape = SubResource("1")
 
 [node name="Wall_Top" type="StaticBody2D" parent="Wall_Container"]
+position = Vector2(0, 1)
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Top"]
@@ -107,7 +108,7 @@ grow_vertical = 2
 [node name="Instructions" parent="UI" instance=ExtResource("8")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 398)
+position = Vector2(576, 392)
 script = ExtResource("10_dstob")
 
 [node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
@@ -124,5 +125,13 @@ stream = ExtResource("14_n6i3x")
 
 [node name="Wall_Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_7f6o3")
+
+[node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = -30.0
+offset_top = -29.0
+offset_right = 1170.0
+offset_bottom = 871.0
+color = Color(0.733333, 0.564706, 0.705882, 1)
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]
